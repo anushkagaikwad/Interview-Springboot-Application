@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MicroserviceRestController {
-    @Value("${passingMarks}")
-    private int passingMarks;
+//    @Value("${passingMarks}")
+//    private int passingMarks;
     @GetMapping("/result")
     public String getResult(@RequestParam int marks){
-        if(marks<passingMarks){
+        if(marks<35){
             return "Failed:(";
         }
         return "Passed!";
